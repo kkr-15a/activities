@@ -1,0 +1,102 @@
+/* Basic Styling */
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Grid Layout */
+.persons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Testimonial Box */
+.person {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.person img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px;
+}
+
+/* Name and Designation */
+.person h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.designation {
+    margin: 5px 0 15px;
+    font-size: 0.9em;
+    opacity: 0.6;
+}
+
+/* Quote and Details */
+.opinion {
+    font-style: italic;
+}
+
+.expression {
+    margin-top: 15px;
+}
+
+/* Responsive Layout */
+@media (min-width: 600px) {
+    .persons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .persons {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "p1 p1 p2 p5"
+            "p3 p4 p4 p5";
+    }
+    .p1 { grid-area: p1; }
+    .p2 { grid-area: p2; }
+    .p3 { grid-area: p3; }
+    .p4 { grid-area: p4; }
+    .p5 { grid-area: p5; }
+}
+.p1{
+    background-color: hsl(263, 55%, 52%);
+    color: white;
+}
+.p2{
+    background-color:hsl(217, 19%, 35%);
+    color: white;
+}
+.p3{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(240, 100%, 5%);
+}
+.p4{
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+}
+.p5{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(240, 100%, 5%);
+
+}
+
+
